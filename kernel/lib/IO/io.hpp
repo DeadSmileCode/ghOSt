@@ -2,12 +2,13 @@
 #define IO_LIB value
 
 #define VIDEO_START (short*)0xb8000 
+#define R_PRINT 0
+#define R_NOPRINT 1
 
-void print_str(const char* str, const int size, const short color);
-void print_str(char* str, const int size, const short color);
-void print_sym(const char str, const short color);
-void print_sym(char str, const short color);
+void print(const char* str, const int size, const short color);
+void print(char* str, const int size, const short color);
+void print(const char str, const short color);
 
-char read();
+void read(int len);
 
 #endif
