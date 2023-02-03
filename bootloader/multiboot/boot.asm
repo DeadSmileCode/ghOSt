@@ -16,13 +16,8 @@ start:
 
 	mov edx, 0x0020
 clear_loop:
-	mov [ebx + ecx], edx
-	dec ecx
-	cmp ecx, -1
-	jnz clear_loop
-
-	mov eax, ( 4 << 8 | 0x41) 
-	mov [ebx], eax
+	extern kmain
+	call kmain
 
 .loop:
     jmp .loop
