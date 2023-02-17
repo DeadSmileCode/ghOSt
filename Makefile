@@ -1,17 +1,22 @@
-DIR_KERNEL_X86 = kernel/arch/x86	#* Kernel code directories for different architecture
+#* Kernel code directories for different architecture
+DIR_KERNEL_X86 = kernel/arch/x86
 DIR_KERNEL_ARM = kernel/arch/arm
 DIR_KERNEL_AVR = kernel/arch/avr
 
-BOOT_FLOOPY = bootloader/floopy		#* Bootloader directories
+#* Bootloader directories
+BOOT_FLOOPY = bootloader/floopy
 BOOT_MULTI = bootloader/multiboot
 
-DIR_MODULES = kernel/modules		#* Runtime modules
+#* Runtime modules
+DIR_MODULES = kernel/modules
 
-DIR_INTER_FILE = build/inter-file	#* Directory for interim compilation files
+#* Directory for interim compilation files
+DIR_INTER_FILE = build/inter-file
 DIR_BUILD = build
 
-ASM_FLAGS = -f elf32				#* Flags for compilators
-CXX_FLAGS = -m32 -masm=intel -nostdlib -ffreestanding -std=c++17 -mno-red-zone -fno-exceptions -fno-rtti -Wall -Wextra -Werror
+#* Flags for compilators
+ASM_FLAGS = -f elf32
+CXX_FLAGS = -m32 -masm=intel -nostdlib -ffreestanding -std=c++17 -mno-red-zone -fno-exceptions -fno-rtti -Wall -Wextra -Werror -fstack-protector-all
 
 NAME_KERNEL = kernel
 
